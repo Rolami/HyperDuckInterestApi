@@ -1,0 +1,77 @@
+[
+  {
+    "InterestId": 1,
+    "Title": "Fishing",
+    "Description": "The act of fishing"
+  },
+  {
+    "InterestId": 2,
+    "Title": "Cooking",
+    "Description": "The art of preparing food"
+  },
+  {
+    "InterestId": 3,
+    "Title": "Hiking",
+    "Description": "Exploring nature on foot"
+  },
+  {
+    "InterestId": 4,
+    "Title": "Photography",
+    "Description": "Capturing moments through a lens"
+  },
+  {
+    "InterestId": 5,
+    "Title": "Gardening",
+    "Description": "Growing and nurturing plants"
+  },
+  {
+    "InterestId": 6,
+    "Title": "Reading",
+    "Description": "Immersing oneself in books"
+  },
+  {
+    "InterestId": 7,
+    "Title": "Painting",
+    "Description": "Expressing creativity through art"
+  },
+  {
+    "InterestId": 8,
+    "Title": "Playing guitar",
+    "Description": "Creating music with strings"
+  },
+  {
+    "InterestId": 9,
+    "Title": "Yoga",
+    "Description": "Connecting mind, body, and spirit"
+  },
+  {
+    "InterestId": 10,
+    "Title": "Traveling",
+    "Description": "Exploring new places and cultures"
+  },
+  {
+    "InterestId": 11,
+    "Title": "Running",
+    "Description": "Exercising through jogging or sprints"
+  },
+  {
+    "InterestId": 12,
+    "Title": "Dancing",
+    "Description": "Expressing emotions through movement"
+  },
+  {
+    "InterestId": 13,
+    "Title": "Playing chess",
+    "Description": "Strategic board game for two players"
+  },
+  {
+    "InterestId": 14,
+    "Title": "Writing",
+    "Description": "Putting thoughts into words"
+  },
+  {
+    "InterestId": 15,
+    "Title": "Meditation",
+    "Description": "Finding inner peace and mindfulness"
+  }
+]
