@@ -1,0 +1,5 @@
+﻿@HyperDuckInterestApi_HostAddress = https://localhost:7112
+
+GET {{HyperDuckInterestApi_HostAddress}}/api/interestlists
+
+###

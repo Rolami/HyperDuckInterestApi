@@ -1,8 +1,3 @@
-
-using HyperDuckInterestApi.Models;
-using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
-using Microsoft.Extensions.DependencyInjection;
 using HyperDuckInterestApi.Data;
 
 namespace HyperDuckInterestApi
@@ -20,11 +15,15 @@ namespace HyperDuckInterestApi
 
             // Add services to the container.
             builder.Services.AddAuthorization();
+            builder.Services.AddControllers();
+
+
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<HyperDuckInterestApiContext>();
+
 
 
             var app = builder.Build();
