@@ -25,10 +25,16 @@ namespace HyperDuckInterestApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<InterestList>>> GetInterestLists()
         {
-          if (_context.InterestLists == null)
-          {
-              return NotFound();
-          }
+            var interestLists = await _context.InterestLists
+                .Include(il => il.Persons)
+                .Include(il => il.Interests)
+                .Include(il => il.InterestLinks)
+                .ToListAsync();
+
+            if (_context.InterestLists == null)
+            {
+                return NotFound();
+            }
             return await _context.InterestLists.ToListAsync();
         }
 
@@ -36,10 +42,15 @@ namespace HyperDuckInterestApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<InterestList>> GetInterestList(int id)
         {
-          if (_context.InterestLists == null)
-          {
-              return NotFound();
-          }
+            var interestLists = await _context.InterestLists
+                .Include(il => il.Persons)
+                .Include(il => il.Interests)
+                .Include(il => il.InterestLinks)
+                .ToListAsync();
+            if (_context.InterestLists == null)
+            {
+                return NotFound();
+            }
             var interestList = await _context.InterestLists.FindAsync(id);
 
             if (interestList == null)
@@ -86,35 +97,35 @@ namespace HyperDuckInterestApi.Controllers
         [HttpPost]
         public async Task<ActionResult<InterestList>> PostInterestList(InterestList interestList)
         {
-          if (_context.InterestLists == null)
-          {
-              return Problem("Entity set 'HyperDuckInterestApiContext.InterestLists'  is null.");
-          }
+            if (_context.InterestLists == null)
+            {
+                return Problem("Entity set 'HyperDuckInterestApiContext.InterestLists'  is null.");
+            }
             _context.InterestLists.Add(interestList);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetInterestList", new { id = interestList.InterestListId }, interestList);
         }
 
-        // DELETE: api/InterestLists/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteInterestList(int id)
-        {
-            if (_context.InterestLists == null)
-            {
-                return NotFound();
-            }
-            var interestList = await _context.InterestLists.FindAsync(id);
-            if (interestList == null)
-            {
-                return NotFound();
-            }
+        //// DELETE: api/InterestLists/5
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> DeleteInterestList(int id)
+        //{
+        //    if (_context.InterestLists == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var interestList = await _context.InterestLists.FindAsync(id);
+        //    if (interestList == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            _context.InterestLists.Remove(interestList);
-            await _context.SaveChangesAsync();
+        //    _context.InterestLists.Remove(interestList);
+        //    await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         private bool InterestListExists(int id)
         {
