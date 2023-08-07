@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace HyperDuckInterestApi.Models
 {
-    public class Interest
+    public class Interests
     {
 
         [Key]

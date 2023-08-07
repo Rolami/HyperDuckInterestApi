@@ -11,133 +11,18 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HyperDuckInterestApi.Migrations
 {
     [DbContext(typeof(HyperDuckInterestApiContext))]
-    [Migration("20230712132419_inittwopointoh")]
-    partial class inittwopointoh
+    [Migration("20230807153125_111")]
+    partial class _111
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.8")
+                .HasAnnotation("ProductVersion", "7.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("HyperDuckInterestApi.Models.Interest", b =>
-                {
-                    b.Property<int>("InterestId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InterestId"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(240)
-                        .HasColumnType("nvarchar(240)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("InterestId");
-
-                    b.ToTable("Interests");
-
-                    b.HasData(
-                        new
-                        {
-                            InterestId = 1,
-                            Description = "The act of fishing",
-                            Title = "Fishing"
-                        },
-                        new
-                        {
-                            InterestId = 2,
-                            Description = "The art of preparing food",
-                            Title = "Cooking"
-                        },
-                        new
-                        {
-                            InterestId = 3,
-                            Description = "Exploring nature on foot",
-                            Title = "Hiking"
-                        },
-                        new
-                        {
-                            InterestId = 4,
-                            Description = "Capturing moments through a lens",
-                            Title = "Photography"
-                        },
-                        new
-                        {
-                            InterestId = 5,
-                            Description = "Growing and nurturing plants",
-                            Title = "Gardening"
-                        },
-                        new
-                        {
-                            InterestId = 6,
-                            Description = "Immersing oneself in books",
-                            Title = "Reading"
-                        },
-                        new
-                        {
-                            InterestId = 7,
-                            Description = "Expressing creativity through art",
-                            Title = "Painting"
-                        },
-                        new
-                        {
-                            InterestId = 8,
-                            Description = "Creating music with strings",
-                            Title = "Playing guitar"
-                        },
-                        new
-                        {
-                            InterestId = 9,
-                            Description = "Connecting mind, body, and spirit",
-                            Title = "Yoga"
-                        },
-                        new
-                        {
-                            InterestId = 10,
-                            Description = "Exploring new places and cultures",
-                            Title = "Traveling"
-                        },
-                        new
-                        {
-                            InterestId = 11,
-                            Description = "Exercising through jogging or sprints",
-                            Title = "Running"
-                        },
-                        new
-                        {
-                            InterestId = 12,
-                            Description = "Expressing emotions through movement",
-                            Title = "Dancing"
-                        },
-                        new
-                        {
-                            InterestId = 13,
-                            Description = "Strategic board game for two players",
-                            Title = "Playing chess"
-                        },
-                        new
-                        {
-                            InterestId = 14,
-                            Description = "Putting thoughts into words",
-                            Title = "Writing"
-                        },
-                        new
-                        {
-                            InterestId = 15,
-                            Description = "Finding inner peace and mindfulness",
-                            Title = "Meditation"
-                        });
-                });
 
             modelBuilder.Entity("HyperDuckInterestApi.Models.InterestLink", b =>
                 {
@@ -389,6 +274,121 @@ namespace HyperDuckInterestApi.Migrations
                         });
                 });
 
+            modelBuilder.Entity("HyperDuckInterestApi.Models.Interests", b =>
+                {
+                    b.Property<int>("InterestId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("InterestId"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(240)
+                        .HasColumnType("nvarchar(240)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("InterestId");
+
+                    b.ToTable("Interests");
+
+                    b.HasData(
+                        new
+                        {
+                            InterestId = 1,
+                            Description = "The act of fishing",
+                            Title = "Fishing"
+                        },
+                        new
+                        {
+                            InterestId = 2,
+                            Description = "The art of preparing food",
+                            Title = "Cooking"
+                        },
+                        new
+                        {
+                            InterestId = 3,
+                            Description = "Exploring nature on foot",
+                            Title = "Hiking"
+                        },
+                        new
+                        {
+                            InterestId = 4,
+                            Description = "Capturing moments through a lens",
+                            Title = "Photography"
+                        },
+                        new
+                        {
+                            InterestId = 5,
+                            Description = "Growing and nurturing plants",
+                            Title = "Gardening"
+                        },
+                        new
+                        {
+                            InterestId = 6,
+                            Description = "Immersing oneself in books",
+                            Title = "Reading"
+                        },
+                        new
+                        {
+                            InterestId = 7,
+                            Description = "Expressing creativity through art",
+                            Title = "Painting"
+                        },
+                        new
+                        {
+                            InterestId = 8,
+                            Description = "Creating music with strings",
+                            Title = "Playing guitar"
+                        },
+                        new
+                        {
+                            InterestId = 9,
+                            Description = "Connecting mind, body, and spirit",
+                            Title = "Yoga"
+                        },
+                        new
+                        {
+                            InterestId = 10,
+                            Description = "Exploring new places and cultures",
+                            Title = "Traveling"
+                        },
+                        new
+                        {
+                            InterestId = 11,
+                            Description = "Exercising through jogging or sprints",
+                            Title = "Running"
+                        },
+                        new
+                        {
+                            InterestId = 12,
+                            Description = "Expressing emotions through movement",
+                            Title = "Dancing"
+                        },
+                        new
+                        {
+                            InterestId = 13,
+                            Description = "Strategic board game for two players",
+                            Title = "Playing chess"
+                        },
+                        new
+                        {
+                            InterestId = 14,
+                            Description = "Putting thoughts into words",
+                            Title = "Writing"
+                        },
+                        new
+                        {
+                            InterestId = 15,
+                            Description = "Finding inner peace and mindfulness",
+                            Title = "Meditation"
+                        });
+                });
+
             modelBuilder.Entity("HyperDuckInterestApi.Models.Person", b =>
                 {
                     b.Property<int>("PersonId")
@@ -526,7 +526,7 @@ namespace HyperDuckInterestApi.Migrations
 
             modelBuilder.Entity("HyperDuckInterestApi.Models.InterestList", b =>
                 {
-                    b.HasOne("HyperDuckInterestApi.Models.Interest", "Interests")
+                    b.HasOne("HyperDuckInterestApi.Models.Interests", "Interests")
                         .WithMany()
                         .HasForeignKey("Fk_InterestId")
                         .OnDelete(DeleteBehavior.Cascade)

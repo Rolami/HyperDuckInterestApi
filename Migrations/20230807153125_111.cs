@@ -7,7 +7,7 @@
 namespace HyperDuckInterestApi.Migrations
 {
     /// <inheritdoc />
-    public partial class inittwopointoh : Migration
+    public partial class _111 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

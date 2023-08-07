@@ -22,7 +22,7 @@ namespace HyperDuckInterestApi.Data
 
         }
 
-        public DbSet<Interest> Interests { get; set; } = default!;
+        public DbSet<Interests> Interests { get; set; } = default!;
         public DbSet<InterestLink> InterestLinks { get; set; } = default!;
         public DbSet<InterestList> InterestLists { get; set; } = default!;
         public DbSet<Person> Persons { get; set; } = default!;
@@ -30,9 +30,9 @@ namespace HyperDuckInterestApi.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
           // Load data from interests.json
-            var interestJson = File.ReadAllText(("Data/Interest.json"));
-            var interests = JsonSerializer.Deserialize<List<Interest>>(interestJson);
-            modelBuilder.Entity<Interest>().HasData(interests);
+            var interestJson = File.ReadAllText(("Data/Interests.json"));
+            var interests = JsonSerializer.Deserialize<List<Interests>>(interestJson);
+            modelBuilder.Entity<Interests>().HasData(interests);
 
             // -||-  iLinks.json
             var iLinksjson = File.ReadAllText(("Data/iLinks.json"));

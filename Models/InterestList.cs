@@ -16,7 +16,7 @@ namespace HyperDuckInterestApi.Models
         
         [ForeignKey("Interests")]
         public int Fk_InterestId { get; set; }
-        public virtual Interest Interests { get; set; }
+        public virtual Interests Interests { get; set; }
 
 
         [ForeignKey("InterestLinks")]
